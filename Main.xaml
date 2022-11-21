@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1624,1858" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:om="clr-namespace:OnlineBanking.Models;assembly=DataService.OnlineBanking.Models" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:ura="clr-namespace:UiPathTeam.RulesEngine.Activities;assembly=UiPathTeam.RulesEngine.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1554,2010" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:om="clr-namespace:OnlineBanking.Models;assembly=DataService.OnlineBanking.Models" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:ura="clr-namespace:UiPathTeam.RulesEngine.Activities;assembly=UiPathTeam.RulesEngine.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>System.Activities</x:String>
@@ -83,10 +83,9 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Loan Workflow" sap:VirtualizedContainerService.HintSize="554,1793" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Loan Workflow" sap:VirtualizedContainerService.HintSize="554,1945" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="om:Loan" Name="loan" />
       <Variable x:TypeArguments="x:Int64" Name="totalRecords" />
@@ -138,9 +137,9 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Loop Over All Loans" sap:VirtualizedContainerService.HintSize="512,1499" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Loop Over All Loans" sap:VirtualizedContainerService.HintSize="512,1651" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1486" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,13 +189,13 @@
               </InArgument>
             </uda:QueryEntityRecords.Top>
           </uda:QueryEntityRecords>
-          <ui:ForEach x:TypeArguments="om:Loan" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,841" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+          <ui:ForEach x:TypeArguments="om:Loan" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,993" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="om:Loan">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="om:Loan" Name="loan" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,718" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,870" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -215,7 +214,7 @@
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ura:RulesPolicy x:TypeArguments="om:Loan" ContinueOnError="{x:Null}" ValidationErrors="{x:Null}" DisplayName="Loan Rules Policy" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="RulesPolicy`1_1" RuleSetName="Loan-1-0" RulesFilePath="Rules\Loan.rules">
+                  <ura:RulesPolicy x:TypeArguments="om:Loan" ContinueOnError="{x:Null}" ValidationErrors="{x:Null}" DisplayName="Loan Rules Policy" sap:VirtualizedContainerService.HintSize="334,203" sap2010:WorkflowViewState.IdRef="RulesPolicy`1_1" RuleSetName="Loan-1-0" RulesFilePath="Rules\Loan.rules">
                     <ura:RulesPolicy.ResultObject>
                       <OutArgument x:TypeArguments="om:Loan">
                         <mca:CSharpReference x:TypeArguments="om:Loan" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">loan</mca:CSharpReference>
@@ -228,7 +227,7 @@
                     </ura:RulesPolicy.TargetObject>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
